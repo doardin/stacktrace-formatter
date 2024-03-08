@@ -12,7 +12,7 @@ function formatStackTrace() {
     // Monta o novo stack trace apenas com as linhas que contêm "br.com."
     var formattedStacktrace = filteredLines.map(function(line) {
         // Aplica a cor vermelha aos arquivos .java
-        var highlightedLine = line.replace(/(at .*?)([^\(\)]+\.(java))(:\d+\))/g, '$1<span class="file" style="color: red">$2$3</span>$4');
+        var highlightedLine = line.replace(/(at .*?)([^\(\)]+\.(java))(:\d+\))/g, '$1<span class="file" style="color: red">$2</span>$4');
         return highlightedLine;
     }).join("\n");
 
